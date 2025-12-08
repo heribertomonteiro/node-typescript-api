@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Projeto utilizando nodejs e typescript",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/index.js",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +27,12 @@
   },
   "homepage": "https://github.com/heribertomonteiro/node-typescript-api#readme",
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^24.10.1",
-    "typescript": "^5.9.3"
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
   },
   "dependencies": {
     "module-alias": "^2.2.3"
